@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+  }
+
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.divDash{
+  width: 70%;
+  margin:40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-card{
+  
+}
+
+.mat-elevation-z8{
+  margin: 20px;
+  width: 180px;
+  text-align: center;
+}
+
+.mainButtons button{
+  background-color: black;
+  color: white;
+}

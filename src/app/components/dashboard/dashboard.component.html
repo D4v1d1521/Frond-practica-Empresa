@@ -1,0 +1,299 @@
+<div id="layoutSidenav_content">
+  <main class="mainButtons">
+    <div class="container-fluid px-4">
+      <h1 class="text-center principal">Datos de la empresa</h1>
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Total Empleados</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleados}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Total areas</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalAreas}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #nameInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesByName(nameInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Total empleados nombre</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadosNombre}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #stateInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesByState(+stateInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Por estado (0-1-2)</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEstado}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Empleados activos</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadosActivos}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Areas activas</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalAreasActivas}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #salaryInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesBySalary(+salaryInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Por salario</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadosSalario}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #ageInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesByAge(+ageInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Por edad</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadosEdad}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Empleados inactivos</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadosInactivos}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Areas inactivas</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalAreasInactivas}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #numberDocumentInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesByDocumentNumber(+numberDocumentInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Por numero de documento</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalEmpleadoNumberDocument}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" #nameAreaInput placeholder="Buscar ..."
+                  aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="getAllEmployesByName(nameAreaInput.value)" type="button">
+                    <i class="fas fa-search fa-sm">🔍︎</i>
+                  </button>
+                </div>
+                
+  
+              </div>
+              <br>
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Por nombre de area</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalNombreArea}}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

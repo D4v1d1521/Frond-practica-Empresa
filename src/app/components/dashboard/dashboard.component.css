@@ -1,0 +1,11 @@
+.mainButtons button{
+    background-color: blue;
+    color: white;
+    
+}
+#layoutSidenav_content{
+    background: linear-gradient(blue, aliceblue);
+}
+.principal{
+    color: aliceblue;
+}
